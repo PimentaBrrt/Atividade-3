@@ -22,6 +22,12 @@ public class Ex1 {
 
         while (mudou) {
 
+            if (servers.size() == 1) {
+                System.out.println(dias + " dias até que nenhum servidor seja mais desligado.");
+                scanner.close();
+                return;
+            }
+
             mudou = false;
             Servidor atual = servers.pop();
             Servidor proximo = servers.pop();
